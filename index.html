@@ -1,124 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - clube Fauna</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      transition: background-color 0.3s ease;
-    }
-
-    #login-container {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      text-align: center;
-      transition: background-color 0.3s ease;
-      position: relative;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 12px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      background-color: #3498db;
-      color: #fff;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-      font-size: 14px;
-    }
-
-    .theme-toggle:hover {
-      background-color: #2980b9;
-    }
-
-    .dark-theme {
-      background-color: #333;
-      color: #fff;
-    }
-
-    #login-container.dark-theme {
-      color: #fff;
-    }
-
-    h2 {
-      color: #3498db;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-initialPage.css">
+    <title>Desbravadores - FAUNA!</title>
 </head>
 <body>
-  <div id="login-container">
-    <h2>Entrar</h2>
-    <form id="login-form" onsubmit="return validateForm()">
-      <input type="text" id="username" placeholder="Nome de usuário" required>
-      <input type="password" id="password" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
-    </form>
-    <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
-  </div>
+    <header>
+        <h1>Desbravadores Ultra Jovem</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#membros">Membros</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <!-- Adicione mais itens ao menu conforme necessário -->
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const loginContainer = document.getElementById('login-container');
+    <section id="home">
+        <div class="jumbotron">
+            <h2>Bem-vindo aos Desbravadores Ultra Jovem</h2>
+            <p>Descubra, aventure-se, cresça!</p>
+        </div>
+    </section>
 
-      body.classList.toggle('dark-theme');
-      loginContainer.classList.toggle('dark-theme');
-    }
+    <section id="membros">
+        <h2>Nossos Membros</h2>
 
-    function validateForm() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+        <div class="members-container">
+            <div class="member-card">
+                <img src="/img/DBV.png" alt="Desbravador de exemplo">
+                <h3>Nome do Desbravador</h3>
+                <p>Descrição ou informações adicionais sobre o desbravador.</p>
+            </div>
+            <div class="member-card">
+                <img src="/img/DBV.png" alt="Desbravador de exemplo">
+                <h3>Nome do Desbravador</h3>
+                <p>Descrição ou informações adicionais sobre o desbravador.</p>
+            </div>
+            <div class="member-card">
+                <img src="/img/DBV.png" alt="Desbravador de exemplo">
+                <h3>Nome do Desbravador</h3>
+                <p>Descrição ou informações adicionais sobre o desbravador.</p>
+            </div>
+            <div class="member-card">
+                <img src="/img/DBV.png" alt="Desbravador de exemplo">
+                <h3>Nome do Desbravador</h3>
+                <p>Descrição ou informações adicionais sobre o desbravador.</p>
+            </div>
+            <!-- Adicione mais membros conforme necessário -->
+        </div>
+    </section>
 
-      if (username.trim() === '' || password.trim() === '') {
-        alert('Por favor, preencha todos os campos.');
-        return false;
-      } else {
-        window.location.href = 'pagInitial/initialPag.html';
-        return false; // To prevent the default form submission
-      }
-    }
-  </script>
+    <section id="eventos">
+        <h2>Próximos Eventos</h2>
+
+        <div class="events-container">
+            <div class="event-card">
+                <img src="/img/eventoExemplo.png" alt="Evento 1">
+                <h3>Evento 1</h3>
+                <p>Local: Local do Evento 1</p>
+                <p>Data: 01 de Janeiro de 2025</p>
+                <p>Hora: 18:00</p>
+            </div>
+            
+            <div class="event-card">
+                <img src="/img/eventoExemplo.png" alt="Evento 2">
+                <h3>Evento 2</h3>
+                <p>Local: Local do Evento 2</p>
+                <p>Data: 15 de Fevereiro de 2025</p>
+                <p>Hora: 14:30</p>
+            </div>
+            <!-- Adicione mais eventos conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Adicione mais seções conforme necessário -->
+
+    <footer>
+        <p>&copy; Gabriel Vinicius | 2024 Desbravadores FAUNA. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
