@@ -34,4 +34,4 @@ Agradecemos a todos os membros por tornarem este clube vibrante e cheio de energ
 
 Divirta-se codificando!
 
-![Desbravadores Fauna](imagens/desbravadores-fauna.png)
+![Desbravadores Fauna](img/dbv.webp)
