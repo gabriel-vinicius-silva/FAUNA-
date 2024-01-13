@@ -12,14 +12,14 @@ Bem-vindo ao repositório do Clube de Desbravadores Fauna do GitHub! Este é um 
 
 ## Estrutura do Repositório
 
-- `/projetos`: Aqui você encontrará informações sobre projetos em andamento e futuras ideias para o clube.
+- `/img`: Aqui você encontrará as imagens chave do progeto .
 
-- `/recursos`: Compartilhe tutoriais, artigos e outros recursos educacionais úteis.
+- `/pagInitial`: pagina que o usuario vera assim que passar pelo campo de login.
 
-- `/eventos`: Detalhes sobre eventos passados e futuros, incluindo workshops, palestras e hackathons.
+- `/styles-theme `: estilos dos temas (ate o momento a dois o claro e o escuro  ).
 
-- `/membros`: Lista de membros ativos e suas contribuições para o clube.
-
+- `/readme.md `: Lista de coisas que tem no progeto onde voce pode ver um breve resumo de alguns itens
+-  `/index.html  `: é o local onde a pagina começa , sendo neste local onde esta localizado o login camp 
 ## Como Contribuir
 
 1. Faça um fork do repositório.
