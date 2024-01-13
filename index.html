@@ -40,6 +40,13 @@
       font-size: 16px;
     }
 
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #3498db;
+    }
+
     button {
       width: 100%;
       background-color: #4caf50;
@@ -99,14 +106,28 @@
       text-decoration: none;
       margin: 0 5px;
     }
+
+    /* Adicione estilo moderno */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Adicione estilo aos links de opções adicionais */
+    .additional-options a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div id="login-container">
     <h2>Entrar</h2>
     <form id="login-form" onsubmit="return validateForm()">
-      <input type="text" id="username" placeholder="&#xf007; Nome de usuário" required>
-      <input type="password" id="password" placeholder="&#xf023; Senha" required>
+      <label for="username"><i class="fas fa-user"></i> Nome de usuário</label>
+      <input type="text" id="username" required>
+      <label for="password"><i class="fas fa-lock"></i> Senha</label>
+      <input type="password" id="password" required>
       <button type="submit">Entrar</button>
     </form>
     <div class="additional-options">
