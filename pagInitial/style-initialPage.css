@@ -42,43 +42,109 @@ section {
 }
 
 /* Estilos dos membros */
-/* Atualize o CSS para membros */
-
 .members-container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 -5px; /* Adicione margem negativa para compensar a margem interna */
 }
 
 .member-card {
-    width: calc(33.33% - 20px);
-    margin: 0 10px 20px 10px;
+    width: calc(25% - 10px);
+    margin: 10px; /* Adicione margem para separação entre os membros */
     padding: 15px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
 }
 
 .member-card img {
     width: 100%;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.member-card:hover img {
+    transform: scale(1.2);
 }
 
 .member-card h3 {
     margin-top: 10px;
     font-size: 1.2em;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.member-card:hover h3 {
+    color: #ff5733;
 }
 
 .member-card p {
     color: #555;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Adicione mais estilos conforme necessário */
+.member-card:hover p {
+    color: #777;
+}
 
-/* Alinhe as imagens no canto esquerdo */
-.member-card:first-child {
-    margin-left: 0;
+/* Estilos dos eventos */
+.events-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -5px; /* Adicione margem negativa para compensar a margem interna */
+}
+
+.event-card {
+    width: calc(25% - 10px);
+    margin: 10px; /* Adicione margem para separação entre os eventos */
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover img {
+    transform: scale(1.2);
+}
+
+.event-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover h3 {
+    color: #ff5733;
+}
+
+.event-card p {
+    color: #555;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover p {
+    color: #777;
 }
 
 /* Estilos do rodapé */
@@ -91,7 +157,7 @@ footer {
 
 @media (max-width: 768px) {
     /* Estilos para dispositivos menores que 768px de largura */
-    .member-card {
-        width: calc(50% - 20px);
+    .member-card, .event-card {
+        width: calc(50% - 10px);
     }
 }
