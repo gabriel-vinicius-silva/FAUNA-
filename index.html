@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - clube Fauna</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s ease;
+    }
+
+    #login-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      font-size: 14px;
+    }
+
+    .theme-toggle:hover {
+      background-color: #2980b9;
+    }
+
+    .dark-theme {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #login-container.dark-theme {
+      color: #fff;
+    }
+
+    h2 {
+      color: #3498db;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-container">
+    <h2>Entrar</h2>
+    <form>
+      <input type="text" placeholder="Nome de usuário">
+      <input type="password" placeholder="Senha">
+      <button type="submit">Entrar</button>
+    </form>
+    <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const loginContainer = document.getElementById('login-container');
+
+      body.classList.toggle('dark-theme');
+      loginContainer.classList.toggle('dark-theme');
+    }
+  </script>
+</body>
+</html>
