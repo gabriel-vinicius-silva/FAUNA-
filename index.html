@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - clube Fauna</title>
+  <title>Login - Clube Fauna</title>
+  <!-- Adicione estas linhas no head para utilizar ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-FsLeXwbUhp5AHZv8eT5r+GVTl9VV8Iu4Ligk1zKe2EM=" crossorigin="anonymous" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,14 +41,15 @@
     }
 
     button {
+      width: 100%;
       background-color: #4caf50;
       color: #fff;
-      padding: 12px;
+      padding: 14px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     button:hover {
@@ -85,16 +88,32 @@
       font-size: 24px;
       margin-bottom: 20px;
     }
+
+    .additional-options {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .additional-options a {
+      color: #3498db;
+      text-decoration: none;
+      margin: 0 5px;
+    }
   </style>
 </head>
 <body>
   <div id="login-container">
     <h2>Entrar</h2>
     <form id="login-form" onsubmit="return validateForm()">
-      <input type="text" id="username" placeholder="Nome de usuário" required>
-      <input type="password" id="password" placeholder="Senha" required>
+      <input type="text" id="username" placeholder="&#xf007; Nome de usuário" required>
+      <input type="password" id="password" placeholder="&#xf023; Senha" required>
       <button type="submit">Entrar</button>
     </form>
+    <div class="additional-options">
+      <a href="#">Esqueceu a senha?</a>
+      <span>|</span>
+      <a href="#">Criar conta</a>
+    </div>
     <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
   </div>
 
@@ -115,8 +134,30 @@
         alert('Por favor, preencha todos os campos.');
         return false;
       } else {
-        window.location.href = 'pagInitial/initialPag.html';
-        return false; // To prevent the default form submission
+        // Aqui, você pode enviar os dados do formulário via AJAX para autenticação no servidor
+        // e redirecionar com base na resposta do servidor.
+        // Exemplo básico usando fetch:
+        fetch('url_do_seu_servidor', {
+          method: 'POST',
+          body: JSON.stringify({ username, password }),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              window.location.href = 'pagInitial/initialPag.html';
+            } else {
+              alert('Credenciais inválidas. Por favor, tente novamente.');
+            }
+          })
+          .catch(error => {
+            console.error('Erro na autenticação:', error);
+            alert('Ocorreu um erro na autenticação. Por favor, tente novamente.');
+          });
+
+        return false; // Para evitar a submissão padrão do formulário
       }
     }
   </script>
