@@ -3,16 +3,21 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Branco */
+    background-color: #fff; /* Branco */
     color: #333; /* Cor principal do texto */
 }
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #0000ff; /* Azul */
+    background-color: #4285f4; /* Azul do Google */
     color: #fff;
     text-align: center;
     padding: 1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header:hover {
+    background-color: #3a77cb; /* Tom mais escuro de azul */
 }
 
 nav ul {
@@ -30,6 +35,11 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Amarelo */
 }
 
 /* Estilos das seções */
@@ -38,10 +48,15 @@ section {
 }
 
 .jumbotron {
-    background-color: #eee;
+    background-color: #f8f9fa; /* Tom mais claro de azul para contraste */
     padding: 20px;
     border-radius: 10px;
     color: #333; /* Cor principal do texto */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.jumbotron:hover {
+    background-color: #e6e8eb; /* Tom mais escuro para o jumbotron durante o hover */
 }
 
 /* Estilos dos membros */
@@ -81,12 +96,12 @@ section {
 .member-card h3 {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #0000ff; /* Azul */
+    color: #4285f4; /* Azul do Google */
     transition: all 0.3s ease-in-out;
 }
 
 .member-card:hover h3 {
-    color: #ff5733; /* Vermelho */
+    color: #ffcc00; /* Amarelo */
 }
 
 .member-card p {
@@ -140,7 +155,7 @@ section {
 }
 
 .event-card:hover h3 {
-    color: #ff5733; /* Vermelho */
+    color: #ffcc00; /* Amarelo */
 }
 
 .event-card p {
@@ -158,6 +173,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
+}
+
+footer:hover {
+    background-color: #552fff34; /* Tom mais escuro de cinza durante o hover */
 }
 
 /* Adicione mais estilos conforme necessário */
