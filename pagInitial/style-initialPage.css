@@ -178,5 +178,8 @@ footer {
 footer:hover {
     background-color: #552fff34; /* Tom mais escuro de cinza durante o hover */
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Adicione mais estilos conforme necessário */
