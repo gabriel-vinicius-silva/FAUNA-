@@ -1,103 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - clube Fauna</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      transition: background-color 0.3s ease;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Clube Fauna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    #login-container {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      text-align: center;
-      transition: background-color 0.3s ease;
-      position: relative;
-    }
+        .container {
+            text-align: center;
+        }
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
+        h1 {
+            color: #333;
+        }
 
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 12px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 16px;
-    }
+        p {
+            color: #555;
+            margin-top: 10px;
+        }
 
-    button:hover {
-      background-color: #45a049;
-    }
+        .btn-start {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    .theme-toggle {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      background-color: #3498db;
-      color: #fff;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-      font-size: 14px;
-    }
-
-    .theme-toggle:hover {
-      background-color: #2980b9;
-    }
-
-    .dark-theme {
-      background-color: #333;
-      color: #fff;
-    }
-
-    #login-container.dark-theme {
-      color: #fff;
-    }
-
-    h2 {
-      color: #3498db;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  </style>
+        .btn-start:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <div id="login-container">
-    <h2>Entrar</h2>
-    <form id="login-form" onsubmit="return validateForm()">
-      <input type="text" id="username" placeholder="Nome de usuário" required>
-      <input type="password" id="password" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
-    </form>
-    <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
-  </div>
-
-  <script></script>
+    <div class="container">
+        <h1>Bem-vindo ao Clube Fauna!</h1>
+        <p>Explore o fascinante mundo da vida selvagem.</p>
+        <a href="pagInitial/initialPag.html" class="btn-start">Clique aqui para começar!</a>
+    </div>
 </body>
 </html>
