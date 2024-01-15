@@ -3,11 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff; /* Branco */
+    color: #333; /* Cor principal do texto */
 }
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #333;
+    background-color: #0000ff; /* Azul */
     color: #fff;
     text-align: center;
     padding: 1em;
@@ -39,6 +41,7 @@ section {
     background-color: #eee;
     padding: 20px;
     border-radius: 10px;
+    color: #333; /* Cor principal do texto */
 }
 
 /* Estilos dos membros */
@@ -58,6 +61,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    background-color: #fff; /* Branco */
 }
 
 .member-card:hover {
@@ -77,12 +81,12 @@ section {
 .member-card h3 {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #333;
+    color: #0000ff; /* Azul */
     transition: all 0.3s ease-in-out;
 }
 
 .member-card:hover h3 {
-    color: #ff5733;
+    color: #ff5733; /* Vermelho */
 }
 
 .member-card p {
@@ -111,6 +115,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    background-color: #fff; /* Branco */
 }
 
 .event-card:hover {
@@ -130,12 +135,12 @@ section {
 .event-card h3 {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #333;
+    color: #e90303; /* Vermelho */
     transition: all 0.3s ease-in-out;
 }
 
 .event-card:hover h3 {
-    color: #ff5733;
+    color: #ff5733; /* Vermelho */
 }
 
 .event-card p {
@@ -155,9 +160,4 @@ footer {
     padding: 1em;
 }
 
-@media (max-width: 768px) {
-    /* Estilos para dispositivos menores que 768px de largura */
-    .member-card, .event-card {
-        width: calc(50% - 10px);
-    }
-}
+/* Adicione mais estilos conforme necessário */
