@@ -98,27 +98,6 @@
     <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
   </div>
 
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const loginContainer = document.getElementById('login-container');
-
-      body.classList.toggle('dark-theme');
-      loginContainer.classList.toggle('dark-theme');
-    }
-
-    function validateForm() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-
-      if (username.trim() === '' || password.trim() === '') {
-        alert('Por favor, preencha todos os campos.');
-        return false;
-      } else {
-        window.location.href = 'pagInitial/initialPag.html';
-        return false; // To prevent the default form submission
-      }
-    }
-  </script>
+  <script></script>
 </body>
 </html>
